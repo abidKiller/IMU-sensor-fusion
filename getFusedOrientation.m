@@ -1,20 +1,9 @@
 function [ fusedOrientation ] = getFusedOrientation( orientation, gyroOrientation )
-%
-% Calculate the fused orientation.
-%
-% orientation: it is the orientation retrieved from the accelerometer and 
-%               magnetic field sensor. It contains two sources of error: 
-%               accelerometer bias and magnetic disturbance.
-% gyroOrientation: it is the orientation calculated from the gyroscope. It
-%                   contains error due to gyroscope drift.
 
     FILTER_COEFFICIENT = 0.98;
     oneMinusCoeff = (1.0 - FILTER_COEFFICIENT);
- 
-    
     % azimuth
     if (gyroOrientation(1) < -0.5 * pi && orientation(1) > 0.0)
-    
         fusedOrientation(1) = (FILTER_COEFFICIENT ...
                 * (gyroOrientation(1) + 2.0 * pi) + oneMinusCoeff ...
                 * orientation(1));

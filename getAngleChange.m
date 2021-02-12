@@ -1,4 +1,4 @@
-function [ angleChange ] = getAngleChange( R, prevR )
+function [angleChange]= getAngleChange( R, prevR )
 
     %rd1=0; rd4=0; rd6=0; rd7=0; rd8=0;
     ri0=0; ri1=0; ri2=0; ri3=0; ri4=0; ri5=0; ri6=0; ri7=0; ri8=0;
@@ -50,7 +50,6 @@ function [ angleChange ] = getAngleChange( R, prevR )
     
     % calculate the parts of the rotation difference matrix we need
     % rd[i][j] = pri[0][i] * ri[0][j] + pri[1][i] * ri[1][j] + pri[2][i] * ri[2][j];
-    
     rd1 = pri0 * ri1 + pri3 * ri4 + pri6 * ri7; %rd[0][1]
     rd4 = pri1 * ri1 + pri4 * ri4 + pri7 * ri7; %rd[1][1]
     rd6 = pri2 * ri0 + pri5 * ri3 + pri8 * ri6; %rd[2][0]

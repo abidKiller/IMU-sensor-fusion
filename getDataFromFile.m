@@ -1,7 +1,4 @@
 function [ x, y, z ] = getDataFromFile( filename, dataType )
-%GETDATAFROMFILE This function retrieves data from a file
-%
-
 
     if strcmp(dataType, 'Acc') == 1
         disp(strcat('Importing accelerometer data from ', filename, ' ...')); 

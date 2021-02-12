@@ -1,6 +1,5 @@
 function [ result ] = matrixMultiplication( A, B )
 
-% matrix multiply and flatten to column vector
    
     result = zeros(9, 1);
 

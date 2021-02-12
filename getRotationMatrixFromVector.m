@@ -8,7 +8,7 @@ function [ R ] = getRotationMatrixFromVector( R, rotationVector )
     if (length(rotationVector) >= 4) 
         q0 = rotationVector(4);
     else 
-        q0 = 1 - q1*q1 - q2*q2 - q3*q3;
+        q0 = 1-q1*q1-q2*q2-q3*q3;
         
         if (q0 > 0)
             q0 = sqrt(q0);
