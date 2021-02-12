@@ -5,6 +5,12 @@ Fast and Accurate sensor fusion using complementary filter .
 
 <img src='https://github.com/abidKiller/IMU-sensor-fusion/blob/main/steps.jpg' >
 
+
+### How to Run 
+ * Install Matlab 
+ * run  <b>testSensionFusion.m </b>
+
 ### Demo
 
 <img src="https://media.giphy.com/media/6vu7Z9iDZ7xfNb6ARy/giphy.gif" width="480" height="404">
+
